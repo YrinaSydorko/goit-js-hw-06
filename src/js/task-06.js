@@ -1,17 +1,20 @@
 const inputName = document.querySelector('#validation-input');
 inputName.addEventListener('blur', outOfFocusInputName);
 console.dir(inputName);
-inputName.classList.remove('valid');
-inputName.classList.remove('invalid');
+//inputName.classList.remove('valid');
+//inputName.classList.remove('invalid');
 function outOfFocusInputName(event) {
+    inputName.classList.remove('valid');
+    inputName.classList.remove('invalid');
     console.log(event.currentTarget.value);
-    if (inputName.textContent == inputName.dataset.length) {
+     if (event.currentTarget.value.length === inputName.dataset.length) {
+        //inputName.classList.remove('invalid');
         inputName.classList.add('valid');
-        inputName.classList.remove('invalid');
-    } else {
+          } else {
+       // inputName.classList.remove('valid');
         inputName.classList.add('invalid');
-        inputName.classList.remove('valid');
-    }
-    return inputName;   
+           }
+    return inputName;  
+  //C
     }
 
