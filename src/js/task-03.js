@@ -19,7 +19,7 @@ images.forEach(image => {
    let altElem = image.alt;
    galleryElem.insertAdjacentHTML('beforeend', `<li><img src =${urlElem} alt =${altElem} width=300</li>`);
  })
- galleryElem.style.display = "flex";
+ galleryElem.style.display = "display-flex";
 
 
 
