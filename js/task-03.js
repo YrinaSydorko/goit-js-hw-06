@@ -12,18 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const list = document.querySelector(".gallery");
 
-const galleryElem = document.querySelector('.gallery');
-images.forEach(image => {
-   let urlElem = image.url;
-   let altElem = image.alt;
-   galleryElem.insertAdjacentHTML('beforeend', `<li><img src =${urlElem} alt =${altElem} width=300</li>`);
- })
- galleryElem.style.display = "display-flex";
+const galleryList = images
+  .map(({url, alt}) => `<li class ='item'><img src =${url} alt=${alt} width='350'></img></li>`
+  ).join("")
 
+console.log(galleryList);
+list.style.display = 'flex'
+list.style.listStyle = 'none'
+list.style.justifyContent = 'space-between'
+list.insertAdjacentHTML("beforeend", galleryList);
 
-
-//const markup = images.map((img) =>
-    //'<li class="gallery___item">< img class= "gallery___img" > alt="${img.alt}" src = "${img.url}" width = "300"</li>').join('');
-   // galleryElem.insertAdjacentHTML('afterbegin',markup);
- //galleryElem.style.display = "flex";
