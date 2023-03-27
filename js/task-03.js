@@ -14,6 +14,45 @@ const images = [
 ];
 const list = document.querySelector(".gallery");
 
+<<<<<<< Updated upstream
+const galleryList = images
+  .map(({url, alt}) => `<li class ='item'><img src =${url} alt=${alt} width='350'></img></li>`
+  ).join("")
+=======
+//const galleryElem = document.querySelector('.gallery');
+//images.forEach(image => {
+   //let urlElem = image.url;
+   //let altElem = image.alt;
+   //galleryElem.insertAdjacentHTML('beforeend', `<li><img src =${urlElem} alt =${altElem} width=300</li>`);
+ //})
+ //galleryElem.style.display = "display-flex";
+>>>>>>> Stashed changes
+
+console.log(galleryList);
+list.style.display = 'flex'
+list.style.listStyle = 'none'
+list.style.justifyContent = 'space-between'
+list.insertAdjacentHTML("beforeend", galleryList);
+
+<<<<<<< Updated upstream
+=======
+
+
+
+
+ //const list = document.querySelector(".gallery");
+//const galleryList = images
+ // .map(({url, alt}) => `<li class ='item'><img src =${url} alt=${alt} width='350'></img></li>`
+  //).join("")
+
+//console.log(galleryList);
+//list.style.display = 'flex'
+//list.style.listStyle = 'none'
+//list.style.justifyContent = 'space-between'
+//list.insertAdjacentHTML("beforeend", galleryList);
+
+const list = document.querySelector(".gallery");
+
 const galleryList = images
   .map(({url, alt}) => `<li class ='item'><img src =${url} alt=${alt} width='350'></img></li>`
   ).join("")
@@ -24,3 +63,4 @@ list.style.listStyle = 'none'
 list.style.justifyContent = 'space-between'
 list.insertAdjacentHTML("beforeend", galleryList);
 
+>>>>>>> Stashed changes
